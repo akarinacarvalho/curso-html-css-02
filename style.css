@@ -1,6 +1,5 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  max-width: 1200px;
   margin: 0 auto;
   color: #313131;
 }
@@ -20,7 +19,17 @@ ul {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 100px;
 }
 
 .header {
@@ -44,14 +53,6 @@ img {
   text-decoration: none;
   color: #313131;
   display: block;
-}
-
-.container {
-  padding: 40px 20px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 100px;
 }
 
 .introducao {
@@ -171,10 +172,23 @@ img {
 
 .formacao {
   background: #141414;
+  position: relative;
+}
+
+.formacao::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url(./img/detalhe.svg) no-repeat center;
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
 }
 
 .formacao .subtitulo {
   color: #000000;
+  max-width: 6ch;
 }
 
 .formacao-texto {
@@ -255,10 +269,65 @@ img {
   content: "";
   width: 24px;
   height: 24px;
-  background: url(./img/cursos.svg) no-repeat center center;
   position: absolute;
   left: -36px;
   top: -4px;
+}
+
+.cursos h3::before {
+  background: url(./img/cursos.svg) no-repeat center center;
+}
+
+.idiomas h3::before {
+  background: url(./img/idiomas.svg) no-repeat center center;
+}
+
+.formacao-extra li {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.formacao-extra span {
+  color: #8f8f8f;
+}
+
+.cursos li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  background: #000000;
+  padding: 120px 20px 60px 20px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.footer-texto {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  color: #cccccc;
+}
+
+.footer-contato li{
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+
+.footer-contato a {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+.footer-copy {
+  grid-column: 1 / -1;
+  font-size: 1.125rem;
+  text-align: center;
+  color: #313131;
 }
 
 @media (max-width: 800px) {
@@ -274,7 +343,7 @@ img {
   .subtitulo {
     font-size: 3rem;
     text-transform: capitalize;
-    max-width: initial;
+    max-width: initial !important;
     text-align: center;
   }
   .introducao {
@@ -315,5 +384,34 @@ img {
     background: #525252;
     color: #e0e0e0;
     padding: 2px 0;
+  }
+  .formacao {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+  .formacao .subtitulo {
+    color: #ffffff;
+    padding-bottom: 40px;
+  }
+  .formacao-texto {
+    text-align: center;
+    max-width: initial;
+    font-size: 1rem;
+  }
+  .formacao-extra h3::before {
+    position: initial;
+    margin-bottom: 15px;
+  }
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .footer-texto {
+    text-align: center;
+  }
+  .footer-contato li{
+    font-size: 1.2rem;
+    text-align: center;
   }
 }

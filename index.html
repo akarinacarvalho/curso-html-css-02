@@ -5,12 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exercício do curso da Origamid, HTML e CSS para iniciantes.</title>
+  <meta name="description" content="Exercício do curso da Origamid, HTML e CSS para iniciantes.">
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-  <header class="header">
-    <img src="./img/marca.svg" alt="Lobo">
+  <header class="container header">
+    <img src="./img/marca.svg" alt="Lobo" width="104" height="38">
     <nav>
       <ul class="header-menu">
         <li><a href="#experiencia">Experiência</a></li>
@@ -20,7 +21,7 @@
     </nav>
   </header>
   <main class="container introducao">
-    <img src="./img/perfil.jpg" alt="Lobo Cinza">
+    <img src="./img/perfil.jpg" alt="Lobo Cinza" width="360" height="520">
     <div>
       <h1>UX e UI Designer estudando Front-end. </h1>
       <p>Localizada no Brasil.</p>
@@ -67,49 +68,56 @@
       </div>
     </div>
   </section>
-  <section class="formacao" id="formacao" aria-label="Formação">
-    <div class="container">
-      <h2 class="subtitulo">Formação</h2>
-      <div>
-        <p class="formacao-texto">
-          <strong>Gosto muito de estudar</strong> e mantenho-me atualizada através de leituras e cursos on-line.
-        </p>
-        <ul class="faculdade-lista">
-          <li class="faculdade">
-            <span class="faculdade-tipo">Pós-Graduação</span>
-            <h3 class="faculdade-curso">Design de Interação</h3>
-            <span class="faculdade-instituicao">Universidade Positivo</span>
-          </li>
-          <li class="faculdade">
-            <span class="faculdade-tipo">Tecnólogo</span>
-            <h3 class="faculdade-curso">Marketing</h3>
-            <span class="faculdade-instituicao">Uninter</span>
-          </li>
-          <li class="faculdade">
-            <span class="faculdade-tipo">Tecnólogo</span>
-            <h3 class="faculdade-curso">Design Gráfico</h3>
-            <span class="faculdade-instituicao">Univali</span>
-          </li>
-        </ul>
-        <div class="formacao-extra">
-          <div class="cursos">
-            <h3>Cursos Intensivos</h3>
-            <ul>
-              <li>HTML e CSS para Iniciantes <span>23h</span></li>
-              <li>Bootcamp UX Design <span>56h</span></li>
-            </ul>
-          </div>
-          <div class="idiomas">
-            <h3>Idiomas</h3>
-            <ul>
-              <li>Inglês <span>/ Básico</span></li>
-              <li>Português <span>/ Fluente</span></li>
-            </ul>
-          </div>
+  <section class="container formacao" id="formacao" aria-label="Formação">
+    <h2 class="subtitulo">Formação</h2>
+    <div>
+      <p class="formacao-texto">
+        <strong>Gosto muito de estudar</strong> e mantenho-me atualizada através de leituras e cursos on-line.
+      </p>
+      <ul class="faculdade-lista">
+        <li class="faculdade">
+          <span class="faculdade-tipo">Pós-Graduação</span>
+          <h3 class="faculdade-curso">Design de Interação</h3>
+          <span class="faculdade-instituicao">Universidade Positivo</span>
+        </li>
+        <li class="faculdade">
+          <span class="faculdade-tipo">Tecnólogo</span>
+          <h3 class="faculdade-curso">Marketing</h3>
+          <span class="faculdade-instituicao">Uninter</span>
+        </li>
+        <li class="faculdade">
+          <span class="faculdade-tipo">Tecnólogo</span>
+          <h3 class="faculdade-curso">Design Gráfico</h3>
+          <span class="faculdade-instituicao">Univali</span>
+        </li>
+      </ul>
+      <div class="formacao-extra">
+        <div class="cursos">
+          <h3>Cursos Intensivos</h3>
+          <ul>
+            <li>HTML e CSS para Iniciantes <span>23h</span></li>
+            <li>Bootcamp UX Design <span>56h</span></li>
+          </ul>
+        </div>
+        <div class="idiomas">
+          <h3>Idiomas</h3>
+          <ul>
+            <li>Inglês <span>/ Básico</span></li>
+            <li>Português <span>/ Fluente</span></li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
+  <footer class="container footer" id="contato">
+    <p class="footer-texto">Estou disponível para novos projetos. Entre em contato comigo para marcarmos uma conversa.</p>
+    <ul class="footer-contato">
+      <li>lobo@email.com</li>
+      <li>+55 21 99999-9999</li>
+      <li><a href="/">@instagram</a></li>
+    </ul>
+    <p class="footer-copy">Lobo. Alguns direitos reservados.</p>
+  </footer>
 </body>
 
 </html>
